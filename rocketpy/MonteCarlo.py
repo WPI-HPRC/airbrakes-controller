@@ -1,0 +1,1 @@
+#code for setting up monte carlo object
