@@ -71,3 +71,6 @@ slprj/
 
 # Unreal Project
 AutoVrtlEnv/
+
+#sim data
+airbrake_mc_out_weather_t3/

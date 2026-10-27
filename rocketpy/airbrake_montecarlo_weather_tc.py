@@ -50,13 +50,14 @@ from rocketpy.stochastic import (
 # AIRBRAKE_CDA_M2 = [0.052, 0.054, 0.056, 0.058, 0.06, 0.062, 0.064, 0.068, 0.07]
 # AIRBRAKE_CDA_M2 = [0.072, 0.074, 0.076, 0.078, 0.8, 0.082, 0.084, 0.086, 0.088, 0.09]
 # AIRBRAKE_CDA_M2 = [0.08]
-AIRBRAKE_CDA_M2 = [0.01, 0.02, 0.03, 0.04, 0.05, 0.06, 0.07, 0.08, 0.09]
+# AIRBRAKE_CDA_M2 = [0.01, 0.02, 0.03, 0.04, 0.05, 0.06, 0.07, 0.08, 0.09]
+AIRBRAKE_CDA_M2 = [0.0]
 AIRBRAKE_REF_AREA = 1.0    # m^2, keep at 1.0 so Cd == CdA
 MACH_DEPLOY = 0.8          # fully deploy below this Mach (after burnout)
 ENG_FILE = "AeroTech_O5500X-PS.eng"
 # End of the thrust curve (last time in the .eng); brakes cannot deploy before this
 BURN_TIME = Motor.import_eng(ENG_FILE)[2][-1][0]
-N_SIMS = 20               # flights per CdA value
+N_SIMS = 50               # flights per CdA value
 PARALLEL = False
 N_WORKERS = 4
 OUT_DIR = "airbrake_mc_out_weather_t3"
