@@ -78,6 +78,10 @@ WEATHER = {
     "pressure_factor_std": 0.01,     # 0.01 -> +/-1 % (~10 hPa) pressure
 }
 
+'''
+TODO fix weather to be based on real conditions
+'''
+
 # Pristine ISA profiles used as the baseline for temperature / pressure
 _ISA = Environment(latitude=LAUNCH_LAT, longitude=LAUNCH_LON, elevation=LAUNCH_ELEV)
 ISA_P, ISA_T = _ISA.pressure_ISA, _ISA.temperature_ISA

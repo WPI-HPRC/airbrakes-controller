@@ -36,12 +36,11 @@ from airbrake_montecarlo_weather_tc import (
 # ----------------------------------------------------------------------------
 PCT = 0.02                 # 1-sigma as a fraction of each nominal value (2 %)
 VARY_WEATHER = True        # also vary weather (uses the stds in WEATHER); False = nominal weather
-# AIRBRAKE_CDA_M2 = [0.0, 0.01, 0.02, 0.03, 0.04, 0.05, 0.06, 0.07]
-AIRBRAKE_CDA_M2 = [0.02]
+AIRBRAKE_CDA_M2 = [0.0, 0.01, 0.02, 0.03, 0.04, 0.05, 0.06, 0.07]
 N_SIMS = 100              # flights per CdA value
 PARALLEL = False
 N_WORKERS = 4
-OUT_DIR = "airbrake_mc_components_out_1-5_t3"
+OUT_DIR = "airbrake_mc_components_out_tc2"
 # ----------------------------------------------------------------------------
 
 
