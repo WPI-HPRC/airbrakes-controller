@@ -14,14 +14,14 @@ import matplotlib.pyplot as plt
 # ----------------------------------------------------------------------------
 # Settings
 # ----------------------------------------------------------------------------
-SAMPLES_CSV = "airbrake_mc_components_out_t3/airbrake_mc_components_samples.csv"
+SAMPLES_CSV = "t4/airbrake_mc_samples.csv"
 # SAMPLES_CSV = "airbrake_mc_out_weather_t3/airbrake_mc_samples.csv"
-OUT_PNG = "airbrake_mc_out/apogee_vs_cda.png"
-OUT_TABLE = "airbrake_mc_out/apogee_vs_cda_table.csv"
+OUT_PNG = "t4/apogee_vs_cda.png"
+OUT_TABLE = "t4/apogee_vs_cda_table.csv"
 APOGEE_COL = "apogee_agl_m"   # or "apogee_asl_m"
 USE_FEET = False              # plot apogee in feet
 ASSUMED_PANEL_CD = 1.0        # for the top axis only; set to your panel's expected Cd
-TARGET_APOGEE_FT = 25000      # target apogee in feet (converted to metres below); None = off
+TARGET_APOGEE_FT = 30000      # target apogee in feet (converted to metres below); None = off
 TARGET_BAND = 0.05            # +/- fraction around the target (0.05 = +/-5 %)
 # ----------------------------------------------------------------------------
 
