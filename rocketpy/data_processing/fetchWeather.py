@@ -28,7 +28,7 @@ STATIONS_TO_TRY = ["KMAF", "MAF"]   # Midland/Odessa; first id that returns data
 LAUNCH_MMDD = "06-15"               # centre of the launch season (keep in sync with the Monte Carlo script)
 WINDOW_DAYS = 14                    # +/- days around it
 YEARS = range(2005, 2027)           # years to pull (years with no data are skipped)
-OUT_CSV = "soundings_KMAF.csv"      # must match SOUNDINGS_CSV in the Monte Carlo script
+OUT_CSV = "../rocket_data/soundings_KMAF.csv"      # must match SOUNDINGS_CSV in the Monte Carlo script
 BASE_URL = "https://mesonet.agron.iastate.edu/cgi-bin/request/raob.py"
 # ------------------------------------------
 

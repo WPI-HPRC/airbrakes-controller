@@ -22,7 +22,7 @@ import re
 import numpy as np
 import pandas as pd
 
-DEFAULT_DIR = "airbrake_mc_out_weather"
+DEFAULT_DIR = "../airbrake_mc_out_weather"
 DEFAULT_ELEVATION_M = 847  # LAUNCH_ELEV in the main script
 WEATHER_COLS = ["wind_speed_factor", "wind_dir_offset_deg", "temp_offset_k", "pressure_factor"]
 

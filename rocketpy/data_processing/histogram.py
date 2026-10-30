@@ -9,7 +9,7 @@ import matplotlib.ticker as ticker
 
 # FILE_NAME = "./airbrake_mc_out/mc_cda_0150.outputs.txt"
 # FILE_NAME = "./airbrake_mc_components_out_1-5_t3/mc_comp_cda_0200.outputs.txt"
-FILE_NAME = "./airbrake_mc_out_weather_t3/mc_cda_0000.outputs.txt"
+FILE_NAME = "../airbrake_mc_out_weather_t3/mc_cda_0000.outputs.txt"
 
 TARGET_APOGEE_FT = 25_000
 PERCENT_RANGE = 0.05

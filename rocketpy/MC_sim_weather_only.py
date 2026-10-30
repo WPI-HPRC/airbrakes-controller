@@ -43,7 +43,7 @@ from rocketpy.stochastic import (
     StochasticTrapezoidalFins,
 )
 
-import weather_stuff as ws
+import weather as ws
 
 # ----------------------------------------------------------------------------
 # User settings
@@ -54,7 +54,7 @@ import weather_stuff as ws
 AIRBRAKE_CDA_M2 = [0.0, 0.01, 0.02, 0.03, 0.04, 0.05, 0.06, 0.07, 0.08, 0.09]
 AIRBRAKE_REF_AREA = 1.0    # m^2, keep at 1.0 so Cd == CdA
 MACH_DEPLOY = 0.8          # fully deploy below this Mach (after burnout)
-ENG_FILE = "AeroTech_O5500X-PS.eng"
+ENG_FILE = "rocket_data/AeroTech_O5500X-PS.eng"
 # End of the thrust curve (last time in the .eng); brakes cannot deploy before this
 BURN_TIME = Motor.import_eng(ENG_FILE)[2][-1][0]
 N_SIMS = 5               # flights per CdA value
@@ -80,7 +80,7 @@ DEPLOY_EXPONENT = 1.0
 
 # ---- Weather (real radiosondes, see weather_stuff.py) ----
 LAUNCH_LAT, LAUNCH_LON, LAUNCH_ELEV = 31.9974, -102.0780, 847
-SOUNDINGS_CSV = "soundings_KMAF.csv"  # written by fetch_soundings.py (Midland/Odessa, TX)
+SOUNDINGS_CSV = "rocket_data/soundings_KMAF.csv"  # written by fetch_soundings.py (Midland/Odessa, TX)
 LAUNCH_MMDD = "06-15"            # centre of launch season, "MM-DD" (match fetch_soundings.py)
 SEASON_WINDOW_DAYS = 14          # use soundings within +/- this many days (any year)
 SOUNDING_HOURS_UTC = (0,)        # EDIT: 0 = 00Z (evening local), 12 = 12Z (dawn local)
@@ -201,8 +201,8 @@ def build_montecarlo(cda, filename, profiles):
         radius=0.131 / 2,
         mass=19.262,
         inertia=(26.7, 26.7, 0.0919),
-        power_off_drag="power_off_drag.csv",
-        power_on_drag="power_on_drag.csv",
+        power_off_drag="rocket_data/power_off_drag.csv",
+        power_on_drag="rocket_data/power_on_drag.csv",
         center_of_mass_without_motor=2.06,
         coordinate_system_orientation="nose_to_tail",
     )

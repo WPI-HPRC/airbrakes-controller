@@ -14,10 +14,10 @@ import matplotlib.pyplot as plt
 # ----------------------------------------------------------------------------
 # Settings
 # ----------------------------------------------------------------------------
-SAMPLES_CSV = "t4/airbrake_mc_samples.csv"
+SAMPLES_CSV = "../t4/airbrake_mc_samples.csv"
 # SAMPLES_CSV = "airbrake_mc_out_weather_t3/airbrake_mc_samples.csv"
-OUT_PNG = "t4/apogee_vs_cda.png"
-OUT_TABLE = "t4/apogee_vs_cda_table.csv"
+OUT_PNG = "../t4/apogee_vs_cda.png"
+OUT_TABLE = "../t4/apogee_vs_cda_table.csv"
 APOGEE_COL = "apogee_agl_m"   # or "apogee_asl_m"
 USE_FEET = False              # plot apogee in feet
 ASSUMED_PANEL_CD = 1.0        # for the top axis only; set to your panel's expected Cd
