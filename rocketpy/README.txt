@@ -1,13 +1,17 @@
-so like only look at airbrake_montecarlo_tc2.py and airbrake_montecarlo_weather_tc.py
+hi
 
-the weather MC will only run a MC varying the weather
-The tc2 will have a 2% error on rocket measurements with the option of varying weather
+all the code used in the pdr for the mc is in old stuff directory all the plotting code is in data_processing
+tc2 is the 2% change and weather is the only weather sim
+lowk just ignore that besides the 2% part cause ill reimplement that into mc_sim_weather_only at some point
 
-MC_better is an updated version of weather MC to have more realistic weather conditions pulled from real data
-Uses the weather_stuff file has the sounding profile class that is used in MC_better
-run fetchWeather at least once to get the csv thatll be used
+data processing has all the plot generation and the file to get the weather data
 
-all other files are either for data processing
-or like actual data
+rocket data is just the csvs of the rocket drag and thrust stuff and weather data
 
-claude was used for most of the code
+the important files are the weather.py and MC_sim_weather_only 
+weather.py is the weather class generated from a month in midland texas that gets used by the mc
+the old code just put error on a predetermined weather enviornment so this is a lot better 
+MC_sim_weather_only is the actual mc sim it is missing the new rocket data im working on the serializer stuff seperatly to make implementation easier
+An important difference between this and the pdr code is I forgot to account for the change in coefficient of drag at higher speeds so that was added here
+
+code was written with claude
