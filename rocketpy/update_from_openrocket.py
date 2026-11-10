@@ -1,4 +1,4 @@
-"""
+""" how to use  - python update_from_openrocket.py  
 Pull the latest OpenRocket designs from GitHub and convert one into RocketPy inputs.
 
     python update_from_openrocket.py                      # default design + first sim with data
