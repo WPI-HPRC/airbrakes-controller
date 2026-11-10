@@ -1,0 +1,123 @@
+{
+  "_source": {
+    "repo": "https://github.com/WPI-HPRC/openrockets.git",
+    "file": "2026-2027 30k.ork",
+    "simulation": "O5500 in Monahans",
+    "simulation_status": "uptodate",
+    "openrocket_commit": "5a89b82",
+    "converted": "2026-11-10T17:23:02",
+    "units": "SI (m, kg, kg*m^2, s, N); positions from nose tip, nose_to_tail",
+    "notes": [
+      "inertia_without_motor_approx removes the motor as a solid cylinder; rocket inertia/CG without motor are estimates.",
+      "Rocket inertia order is [I_11, I_22, I_33] = [pitch, yaw, roll] like RocketPy.",
+      "parachute trigger is metres above ground or 'apogee'."
+    ]
+  },
+  "openrocket_results": {
+    "apogee_m": 8840.934,
+    "max_velocity_ms": 604.312,
+    "max_mach": 1.822,
+    "time_to_apogee_s": 38.457
+  },
+  "rocket": {
+    "radius": 0.0655,
+    "length": 4.292599999999997,
+    "mass_with_motor_liftoff": 34.729,
+    "cg_with_motor_liftoff": 2.77,
+    "inertia_with_motor_liftoff": [
+      48.218,
+      48.218,
+      0.106
+    ],
+    "inertia_with_motor_burnout": [
+      39.328,
+      39.328,
+      0.095
+    ],
+    "mass_without_motor": 17.945999999999998,
+    "center_of_mass_without_motor": 2.0982498105427423,
+    "inertia_without_motor_approx": [
+      28.27430150727117,
+      28.27430150727117,
+      0.0858520085
+    ]
+  },
+  "motor": {
+    "designation": "O5500X-PS",
+    "manufacturer": "AeroTech",
+    "diameter": 0.098,
+    "length": 1.507,
+    "position_nozzle": 4.241799999999997,
+    "total_mass": 16.783,
+    "dry_mass": 7.004,
+    "propellant_mass": 9.779000000000002,
+    "burn_time": 3.997,
+    "total_impulse": 21395.2529085
+  },
+  "nose": {
+    "name": "Nose Cone",
+    "kind": "ogive",
+    "openrocket_shape": "ogive",
+    "shape_parameter": 1.0,
+    "length": 0.508,
+    "base_radius": 0.065405,
+    "position": 0.0
+  },
+  "fins": [
+    {
+      "name": "Trapezoidal Fin Set + Paint",
+      "n": 3,
+      "root_chord": 0.4572,
+      "tip_chord": 0.07619999999999998,
+      "span": 0.1651,
+      "sweep_length": 0.43179999999999996,
+      "cant_angle_deg": 0.0,
+      "position": 3.708399999999997
+    }
+  ],
+  "tail": {
+    "name": "Tail Cone",
+    "length": 0.127,
+    "position": 4.165599999999997,
+    "top_radius": 0.065405,
+    "bottom_radius": 0.044449999999999996
+  },
+  "parachutes": [
+    {
+      "name": "Iris Ultra Compact Parachute [Cd 2.2 (16.3 oz) 90.5 in^3]",
+      "cd": 2.2,
+      "diameter": 2.4383999999999997,
+      "cd_s": 10.273595480197585,
+      "trigger": 304.8,
+      "deploy_event": "altitude",
+      "deploy_delay_s": 0.0,
+      "position": 1.5748
+    },
+    {
+      "name": "Payload Chute",
+      "cd": 2.2,
+      "diameter": 0.9144,
+      "cd_s": 1.4447243644027856,
+      "trigger": 259.08000000000004,
+      "deploy_event": "altitude",
+      "deploy_delay_s": 0.0,
+      "position": 1.2065000000000003
+    },
+    {
+      "name": "Compact Elliptical Parachute [Cd 1.55 (3.3 oz) 18.0 in^3)",
+      "cd": 1.55,
+      "diameter": 0.9144,
+      "cd_s": 1.0178739840110533,
+      "trigger": "apogee",
+      "deploy_event": "apogee",
+      "deploy_delay_s": 0.0,
+      "position": 2.0700999999999996
+    }
+  ],
+  "rail_buttons": [
+    {
+      "name": "Rail Button",
+      "position": 2.870199999999996
+    }
+  ]
+}

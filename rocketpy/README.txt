@@ -15,3 +15,17 @@ MC_sim_weather_only is the actual mc sim it is missing the new rocket data im wo
 An important difference between this and the pdr code is I forgot to account for the change in coefficient of drag at higher speeds so that was added here
 
 code was written with claude
+
+UPDATING ROCKET DATA FROM OPENROCKET
+run:  python update_from_openrocket.py
+it pulls the latest designs from https://github.com/WPI-HPRC/openrockets and writes into rocket_data/:
+  power_on_drag.csv, power_off_drag.csv  (Mach,Cd from the saved OpenRocket sim)
+  thrust_curve.csv                        (time,thrust)
+  rocket_params.json                      (radius, mass, inertia, CG, nose/fins/tail/motor positions, parachutes)
+options: --list (show designs and sims), --ork "file.ork", --sim "sim name", --no-pull
+the design must have a simulation that was run AND saved in OpenRocket before it was pushed,
+otherwise there is no drag data in the .ork file.
+
+MC_sim_openrocket.py = same MC as MC_sim_weather_only but the rocket comes from OpenRocket:
+it runs update_from_openrocket.py at start-up and builds the rocket from rocket_data/rocket_params.json.
+results go to mc_openrocket_out/ (with rocket_params_used.json recording which design was flown).
